@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       b66323ab-0ab8-402e-a5a6-7cf837863bee
+:hash:     9f2b2bf7b2051370c342969be2d6d3c2e9c350e7
+:last-modified: 12/28/22
+:END:
+#+title: Root Node
+
+Root test node used to provide entry to org-roam behavior via an ~Org-Roam~ file, loading
+org-roam configuration with local variables.

@@ -1,0 +1,6 @@
+* Good Org Roam Development Environment
+The ~GORDE~ is a Good Org Roam Development Environment providing a simple set of Org Roam
+templates to work with.
+
+The Goal of this repo is to provide a stable set of realistic Org Roam instances that
+facilitate safer & more efficient development of Org Roam Extensions.
