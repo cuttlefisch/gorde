@@ -6,9 +6,12 @@
                                 (if (stringp curdir)
                                     curdir
                                    (car curdir))))))
-          ;; These two are important
+
+          ;; These two are important, if not set correctly your REAL
+          ;; org roam instance may be modified.
           (eval . (setq-local org-roam-directory project-root-path))
           (eval . (setq-local org-roam-db-location (concat project-root-path ".org-roam.db")))
+
           ;; We load in some extra languages for convenience
           (eval . (org-babel-do-load-languages 'org-babel-load-languages
                                '((sql . t)
@@ -21,4 +24,4 @@
                                  (python . t)
                                  (R . t)
                                  (shell . t)
-                                 emacs-lisp . nil))))))
+                                 (emacs-lisp . t)))))))

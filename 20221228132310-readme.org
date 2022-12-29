@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9ebc0e58-4484-4e59-85c1-e4f66fb27cc2
-:hash:     6f40a4b292110728f2be1403ed770b387809fd5c
+:hash:     6f8d1c65e8f2e53ede545b5863f3592746755608
 :last-modified: 12/28/22
 :END:
 #+title: Quickstart
@@ -9,8 +9,6 @@
 * Generate Initial Configuration
 Initial configuration must:
  * Set & activate local variables to prevent any impact on other Org Roam instances
- *
-
 
 ** Initialize & Reset the environment
 Resetting the environment consists of removing any org files in this dir, then
@@ -20,6 +18,14 @@ To reset, remove the ~:noeval~ header arg, then execute the block.
 #+begin_src bash :dir . :noeval
 rm -f *.test
 #+end_src
+
+Then tangle this file to generate the core project files.
+#+begin_src emacs-lisp
+(org-babel-tangle)
+#+end_src
+
+#+RESULTS:
+| .dir-locals.el | README.org |
 
 
 ** The README.org file
@@ -36,6 +42,12 @@ The Goal of this repo is to provide a stable set of realistic Org Roam instances
 facilitate safer & more efficient development of Org Roam Extensions.
 #+end_src
 
+
+** Local configuration via dir-locals.el
+Within `.dir-locals.el` org roam variables are set to behave relative to this project's
+current directory.
+
+A local variable ~project-root-path~ holds the base directory name desired for any
 
 #+begin_src elisp :tangle .dir-locals.el
 ((org-mode . ((eval . (setq-local project-root-path
